@@ -1,0 +1,53 @@
+/* ছোট ডিভাইসের জন্য অতিরিক্ত স্টাইল */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .principal-photo {
+        min-width: 100%;
+    }
+    
+    .message-text {
+        min-width: 100%;
+    }
+    
+    .footer-col {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .school-name h1 {
+        font-size: 18px;
+    }
+    
+    .school-name p {
+        font-size: 12px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .notice-label {
+        font-size: 12px;
+    }
+    
+    .notice-content a {
+        font-size: 12px;
+        margin-right: 15px;
+    }
+    
+    .event-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

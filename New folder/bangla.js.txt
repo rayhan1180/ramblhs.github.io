@@ -1,0 +1,15 @@
+function loadBanglaContent() {
+    // এই ফাংশনে সব বাংলা কন্টেন্ট লোড হবে
+    console.log('বাংলা কন্টেন্ট লোড করা হচ্ছে...');
+    
+    // উদাহরণ হিসেবে শুধু টাইটেল পরিবর্তন
+    document.title = "আমাদের স্কুল - সরকারি উচ্চ বিদ্যালয়";
+    
+    // আরও অনেক কন্টেন্ট এখানে যোগ করা যাবে
+}
+
+function loadEnglishContent() {
+    // ইংরেজি কন্টেন্ট লোড করার ফাংশন
+    console.log('Loading English content...');
+    document.title = "Our School - Government High School";
+}

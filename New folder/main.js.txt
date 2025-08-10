@@ -1,0 +1,65 @@
+// মোবাইল মেনু টগল
+document.querySelector('.mobile-menu').addEventListener('click', function() {
+    const nav = document.querySelector('nav ul');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+});
+
+// ভাষা পরিবর্তন
+document.getElementById('bangla-btn').addEventListener('click', function() {
+    // বাংলা কন্টেন্ট লোড করার লজিক
+    loadBanglaContent();
+    this.classList.add('active');
+    document.getElementById('english-btn').classList.remove('active');
+});
+
+document.getElementById('english-btn').addEventListener('click', function() {
+    // ইংরেজি কন্টেন্ট লোড করার লজিক
+    loadEnglishContent();
+    this.classList.add('active');
+    document.getElementById('bangla-btn').classList.remove('active');
+});
+
+// গ্যালারি লাইটবক্স (মৌলিক ইমপ্লিমেন্টেশন)
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const imgSrc = this.querySelector('img').src;
+        // এখানে লাইটবক্স খুলবে
+        alert('গ্যালারি ছবি বড় করে দেখানো হবে: ' + imgSrc);
+    });
+});
+
+// ফর্ম ভ্যালিডেশন উদাহরণ
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        let valid = true;
+        
+        this.querySelectorAll('[required]').forEach(input => {
+            if (!input.value.trim()) {
+                input.style.borderColor = 'red';
+                valid = false;
+            }
+        });
+        
+        if (!valid) {
+            e.preventDefault();
+            alert('অনুগ্রহ করে সমস্ত প্রয়োজনীয় তথ্য প্রদান করুন');
+        }
+    });
+});
+
+// স্ক্রলে হেডার স্টাইল পরিবর্তন
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.main-header');
+    if (window.scrollY > 100) {
+        header.style.position = 'fixed';
+        header.style.top = '0';
+        header.style.width = '100%';
+        header.style.zIndex = '1000';
+        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        header.style.background = 'white';
+    } else {
+        header.style.position = 'relative';
+        header.style.boxShadow = 'none';
+        header.style.background = 'transparent';
+    }
+});
